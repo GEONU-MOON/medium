@@ -135,6 +135,16 @@ nav {
   font-size: 16px;
 }
 
+.company-container {
+  display: flex;
+  margin: 0 auto;
+  height: 1202px;
+  gap: 50px;
+  width: 1200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 /* 좌측 메뉴 */
 .company-menu {
   flex-basis: 20%;
@@ -399,5 +409,155 @@ footer {
   .menu li a {
     font-weight: 700;
     font-size: 14px;
+  }
+
+  .company-container {
+    display: flex;
+    flex-direction: column; /* 세로로 배치 */
+    margin: 0 auto;
+    height: auto;
+    gap: 20px;
+    width: 634px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .company-menu {
+    width: 100%; /* 전체 너비 */
+    padding: 0;
+    border-bottom: none; /* 하단 구분선 추가 */
+    margin: 0;
+  }
+
+  .company-menu ul {
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    align-items: flex-start; /* 위쪽 정렬 */
+    gap: 24px; /* 항목 사이 간격 */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-bottom: none; /* 하단 구분선 */
+    width: 100%; /* 전체 너비 */
+    overflow-x: auto; /* 가로 스크롤 활성화 */
+    overflow-y: hidden;
+    white-space: nowrap; /* 줄바꿈 방지 */
+  }
+
+  .company-menu ul li {
+    display: inline-block; /* 가로로 항목을 배치 */
+    padding: 0 0; /* 여백 조정 */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+  }
+
+  .company-menu ul li a {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color-text-secondary, #5f646f);
+    line-height: 22px; /* 줄 간격 설정 */
+    text-decoration: none;
+    padding-top: 0;
+  }
+
+  .company-menu ul li a.active {
+    font-weight: bold; /* 활성화된 항목 강조 */
+    color: var(--color-text-primary, #222); /* 강조된 텍스트 색상 */
+    padding: 10px 0; /* 여백 조정 */
+    border-left: none;
+  }
+
+  .company-content {
+    width: 100%; /* 전체 너비 */
+    padding: 0 20px; /* 좌우 패딩 */
+  }
+
+  .company-description {
+    text-align: center; /* 설명 텍스트 중앙 정렬 */
+  }
+
+  .company-info {
+    text-align: left; /* 정보 텍스트는 왼쪽 정렬 */
+    padding: 0; /* 여백 초기화 */
+  }
+
+  .company-info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  footer {
+    background-color: white;
+    height: auto;
+  }
+  .footer-info {
+    padding-bottom: 0;
+  }
+
+  .footer-section-container {
+    display: none;
+  }
+
+  .footer-copyright-wrapper {
+    width: 100%;
+    background-color: #f4f6f9;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .footer-info-links {
+    width: 100%;
+  }
+
+  .footer-info-links a {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+
+  .footer-info-links a:nth-child(n + 5) {
+    display: none; /* 5번째 링크부터 숨기기 */
+  }
+
+  /* footer-logo-container 새로 정렬 및 왼쪽 정렬 */
+  .footer-logo-container {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    margin-top: 20px;
+    width: 100%; /* 전체 너비 사용 */
+    padding-left: 20px; /* 왼쪽에 약간의 여백을 추가할 수 있음 */
+  }
+
+  /* footer-powered-by 새로 정렬 및 왼쪽 정렬 */
+  .footer-powered-by {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    gap: 5px; /* 텍스트와 로고 사이 간격 */
+    margin-top: 10px; /* 위쪽 간격 추가 */
+    width: 100%; /* 전체 너비 사용 */
+    padding-left: 20px; /* 왼쪽에 약간의 여백을 추가할 수 있음 */
+  }
+
+  /* footer-copyright 새로 정렬 및 왼쪽 정렬 */
+  .footer-copyright {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    gap: 20px; /* 섹션 간 간격 */
+    width: 100%; /* 전체 너비 사용 */
+  }
+
+  /* footer-text 왼쪽 정렬 */
+  .footer-text {
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    width: 100%; /* 전체 너비 사용 */
+  }
+
+  .footer-copyright-wrapper {
+    width: 100%;
+    background-color: #f4f6f9;
+    padding-top: 0;
   }
 }
