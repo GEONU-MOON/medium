@@ -1,0 +1,128 @@
+/* 기본 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.company-container {
+  display: flex;
+  margin: 0 auto;
+  height: 1202px;
+  gap: 50px;
+  width: 1200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* 좌측 메뉴 */
+.company-menu {
+  flex-basis: 20%;
+}
+
+.company-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.company-menu ul li {
+  padding: 16px 0;
+}
+
+.company-menu ul li:first-child {
+  padding-top: 0; /* 첫 번째 항목의 상단 패딩 제거 */
+}
+
+.company-menu ul li a {
+  color: var(--color-text-secondary, #5f646f);
+  text-decoration: none;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 16px;
+}
+
+.company-menu ul li a.active {
+  color: var(--color-text-primary, #222); /* 활성화된 상태의 텍스트 색상 */
+  font-weight: bold; /* 활성화된 상태의 굵은 폰트 */
+  border-left: 4px solid var(--color-border-primary, #222); /* 왼쪽 보더 */
+  padding-left: 12px; /* 보더로 인해 텍스트 위치 조정 */
+}
+
+/* 우측 컨텐츠 */
+.company-content {
+  flex-basis: 80%;
+}
+
+.company-content h1 {
+  color: var(--color-neutral-900, #222);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  border-bottom: 2px solid #000; /* 원하는 색상과 두께로 설정 */
+  padding-bottom: 8px; /* 텍스트와 보더 사이 간격 */
+  margin-bottom: 16px;
+}
+
+.company-description {
+  color: var(--color-text-secondary, #5f646f);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.company-org-chart {
+  display: flex;
+  height: 494px;
+  padding: 6px 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  align-self: stretch;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd; /* 하단 보더 */
+}
+
+.company-info-row:first-child {
+  border-top: 2px solid #000; /* 첫 번째 행에만 위쪽 보더 추가 */
+}
+
+.company-info-label {
+  flex-basis: 150px; /* 왼쪽 라벨 고정 너비 */
+  color: var(--color-text-primary, #222);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 137.5% */
+}
+
+.company-info-data {
+  flex-grow: 1; /* 오른쪽 데이터는 남은 공간을 차지 */
+  color: var(--color-text-primary, #222);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+}
