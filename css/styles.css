@@ -1,0 +1,282 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Ad Banner Section */
+.ad-banner {
+  width: 100%;
+  max-width: 970px;
+  height: 90px;
+  margin: 0 auto;
+  background-image: url("../img/ad-background.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reebok-logo {
+  width: 50px;
+  height: auto;
+}
+
+.family-week,
+.festival-text {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.family-week {
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 16px;
+}
+
+.festival-text {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.text-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Logo and Login Section */
+.logo-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid var(--color-neutral-150, #ebeef1);
+  border-bottom: 1px solid var(--color-neutral-150, #ebeef1);
+  position: relative;
+  padding: 20px 0;
+}
+
+.login-container {
+  width: 1200px;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 8px 5px 8px; /* 여백 설정 */
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  align-items: flex-start; /* 상단 정렬 */
+  gap: 10px; /* 요소 간 간격 */
+}
+
+.login-wrapper {
+  width: 52px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+  align-items: center; /* 수직 정렬 */
+}
+
+.login-text {
+  color: var(--color-text-disabled, #c5c8ce);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 169.231% */
+  letter-spacing: -0.4px;
+  text-decoration: none;
+  border: 1px solid var(--color-border-secondary, #e2e5eb); /* 테두리 추가 */
+  padding: 3px 8px; /* 글자와 테두리 사이의 여백 */
+}
+
+.main-logo-container {
+  width: 1200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-logo {
+  width: 312px;
+  height: auto;
+}
+
+/* Navigation Menu */
+nav {
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-text-primary, #222); /* 하단 보더 추가 */
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Footer 전체 */
+footer {
+  background-color: white;
+  height: 394px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center; /* 중앙 정렬 */
+}
+
+/* 섹션을 가로로 나열하기 위한 컨테이너 */
+.footer-section-container {
+  width: 100%;
+  display: flex;
+  background-color: #fbfbfd;
+  padding: 40px 0;
+  justify-content: center;
+}
+
+.footer-section {
+  width: 120px;
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  padding-left: 16px;
+  padding-right: 4px;
+  gap: 12px; /* 세로 간격 12px 설정 */
+  border-left: 2px solid var(--color-neutral-150, #ebeef1);
+}
+
+.section-title {
+  color: var(--color-text-Color, #222);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.sub-section {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--color-text-secondary, #5f646f);
+}
+
+.footer-info {
+  width: 100%;
+  text-align: center;
+  padding: 16px 0;
+  background-color: #f4f6f9; /* 배경 색상 조정 */
+}
+
+.footer-info-links {
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap; /* 여러 줄로 나열 가능 */
+  width: 1200px;
+}
+
+.footer-info-links a {
+  font-size: 13px;
+  color: var(--color-text-secondary, #5f646f);
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+/* 구분선을 추가하기 위한 스타일 */
+.footer-info-links a::after {
+  content: "|"; /* 구분선 표시 */
+  color: var(--color-text-secondary, #5f646f); /* 구분선 색상 */
+  margin-left: 10px;
+}
+
+/* 마지막 링크에서 구분선 제거 */
+.footer-info-links a:last-child::after {
+  content: ""; /* 구분선 없앰 */
+}
+
+/* 개인정보처리방침에만 스타일 적용 */
+.highlight-link {
+  color: var(--color-neutral-800, #434855);
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 138.462% */
+}
+
+.footer-copyright-wrapper {
+  width: 100%;
+  background-color: #f4f6f9;
+  padding: 40px 0; /* 여백 설정 */
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: space-between; /* 양쪽 정렬 */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* 로고와 텍스트 사이 간격 */
+}
+
+.footer-logo {
+  height: 40px; /* 로고 크기 */
+}
+
+.footer-text {
+  color: var(--color-text-secondary, #5f646f);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.footer-text p {
+  margin-bottom: 6px;
+}
+
+.footer-text p:last-child {
+  margin-bottom: 0; /* 마지막 p 태그는 간격이 필요 없으므로 0으로 설정 */
+}
+
+.footer-powered-by {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 텍스트와 로고 사이 간격 */
+  color: var(--color-text-tertiary, #9397a1);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Pretendard;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.footer-powered-by img {
+  height: 16px; /* Powered by 로고 크기 */
+}
