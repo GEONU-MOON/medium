@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>뉴스포미</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/media_introduction.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=1824b7fdb5df14c5e9c05db459a1b8b0"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Ad Banner Section -->
+      <div class="ad-banner">
+        <div class="text-container">
+          <div class="logo-and-week">
+            <img
+              src="../img/ad-logo.png"
+              alt="Reebok Logo"
+              class="reebok-logo"
+            />
+            <h1 class="family-week">FAMILY WEEK</h1>
+          </div>
+          <h2 class="festival-text">Reebok Life Festival</h2>
+        </div>
+      </div>
+
+      <!-- Logo and Login Section -->
+      <div class="logo-login-container">
+        <!-- 로그인 및 검색, 메뉴 아이콘 -->
+        <div class="login-container">
+          <!-- 로그인 버튼 (웹) -->
+          <div class="login-wrapper">
+            <a href="#" class="login-text">로그인</a>
+          </div>
+        </div>
+        <!-- Logo and Icon Section (통합) -->
+        <div class="logo-and-icon-container">
+          <!-- 메인 로고 -->
+          <img
+            src="../img/mainlogo.png"
+            alt="뉴스포미 Logo"
+            class="main-logo"
+          />
+
+          <!-- 아이콘들 (모바일) -->
+          <div class="icon-container">
+            <img
+              src="../img/Search.svg"
+              alt="Search Icon"
+              class="search-icon"
+            />
+            <img src="../img/Menu.svg" alt="Menu Icon" class="menu-icon" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="menu">
+          <li><a href="#">정치</a></li>
+          <li><a href="#">사회</a></li>
+          <li><a href="#">경제</a></li>
+          <li><a href="#">IT/과학</a></li>
+          <li><a href="#">연예</a></li>
+          <li><a href="#">스포츠</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="company-container">
+      <!-- 좌측 메뉴 -->
+      <div class="company-menu">
+        <ul>
+          <li><a href="#" class="active">매체소개</a></li>
+          <li><a href="#">CEO인사말</a></li>
+          <li><a href="#">신문윤리강령</a></li>
+          <li><a href="#">인터넷신문윤리강령</a></li>
+          <li><a href="#">기사제보</a></li>
+          <li><a href="#">청소년보호정책</a></li>
+          <li><a href="#">저작권보호정책</a></li>
+          <li><a href="#">이메일 무단수집거부</a></li>
+        </ul>
+      </div>
+
+      <!-- 우측 컨텐츠 -->
+      <div class="company-content">
+        <h1>창간정신</h1>
+        <div class="company-description">
+          <p>
+            한국NGO신문은 '건강한 시민 사회를 만들기 위해' 2002년 9월
+            창간했습니다.<br />
+            한국NGO신문은 '시민들의 시각에서 세상을 바라보는' 진정한 시민언론을
+            지향합니다.<br />
+            ‘경제정의’와 ‘공정사회’ ‘정치개혁’을 소망합니다.<br />
+            '최고를 지향하기 보다는<br />
+            우리 사회에 꼭 필요한 언론'이 되도록 하는 것이 한국NGO신문
+            임직원들의 마음 가짐입니다.
+          </p>
+        </div>
+        <h1>발행체제</h1>
+        <div class="company-description">
+          <p>
+            인터넷 뉴스는 24시간 실시간으로 제작되고 있고<br />
+            종이신문은 매주 16면으로 발행돼 전국에 배포되고 있습니다.
+          </p>
+        </div>
+        <h1>오시는 길</h1>
+        <div class="company-org-chart" id="map"></div>
+        <div class="company-info">
+          <div class="company-info-row">
+            <div class="company-info-label">주 소</div>
+            <div class="company-info-data">
+              서울특별시 마포구 마포대로 12, 813호 (마포동, 한신빌딩)
+            </div>
+          </div>
+          <div class="company-info-row">
+            <div class="company-info-label">대표번호</div>
+            <div class="company-info-data">02-775-5541</div>
+          </div>
+          <div class="company-info-row">
+            <div class="company-info-label">이메일</div>
+            <div class="company-info-data">ngo@ngonews.kr</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section-container">
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+        </div>
+        <!-- 두 번째 섹션 그룹 -->
+        <div class="footer-info">
+          <div class="footer-info-links">
+            <a href="#">신문사 소개</a>
+            <a href="#">찾아오는 길</a>
+            <a href="#">광고문의</a>
+            <a href="#">기사제보</a>
+            <a href="#">문의하기</a>
+            <a href="#">뉴스레터 신청</a>
+            <a href="#" class="highlight-link">개인정보처리방침</a>
+            <a href="#">청소년보호정책</a>
+            <a href="#">이메일 무단수집거부</a>
+            <a href="#">회원이용약관</a>
+          </div>
+        </div>
+
+        <!-- 세 번째 섹션 -->
+        <div class="footer-copyright-wrapper">
+          <div class="footer-copyright">
+            <div class="footer-logo-container">
+              <img
+                src="../img/footerlogo.png"
+                alt="뉴스포미 로고"
+                class="footer-logo"
+              />
+              <div class="footer-text">
+                <div class="footer-column">
+                  <p>주소: -</p>
+                  <p>등록번호: -</p>
+                </div>
+                <div class="footer-column">
+                  <p>편집인: -</p>
+                  <p>발행인: -</p>
+                  <p>청소년 보호책임자: -</p>
+                  <p>대표전화: -</p>
+                </div>
+                <div class="footer-column">
+                  <p>Copyright ⓒ {회사명} All Rights Reserved.</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-powered-by">
+              <span>Powered by</span>
+              <img src="../img/processAi.png" alt="Presscon Ai 로고" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      var mapContainer = document.getElementById("map"),
+        mapOption = {
+          center: new kakao.maps.LatLng(37.5397, 126.9458),
+          level: 3,
+        };
+
+      var map = new kakao.maps.Map(mapContainer, mapOption);
+
+      var markerPosition = new kakao.maps.LatLng(37.5397, 126.9458);
+      var marker = new kakao.maps.Marker({
+        position: markerPosition,
+      });
+
+      marker.setMap(map);
+    </script>
+  </body>
+</html>
