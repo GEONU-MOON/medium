@@ -235,6 +235,7 @@ footer {
   text-align: center;
   padding: 16px 0;
   background-color: #f4f6f9; /* 배경 색상 조정 */
+  border-bottom: 1px solid #e6ecf7;
 }
 
 .footer-info-links {
@@ -589,7 +590,7 @@ footer {
   }
 
   .company-menu {
-    width: 110%; /* 전체 너비 */
+    width: 100%; /* 전체 너비 */
     padding: 0;
     border-bottom: none; /* 하단 구분선 추가 */
     margin: 0;
