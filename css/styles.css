@@ -264,7 +264,7 @@ footer {
   display: inline-block;
   width: auto;
   height: 12px;
-  content: url("../img/vector.png"); /* 이미지 경로 */
+  content: url("../img/Vector.svg"); /* 이미지 경로 */
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -338,7 +338,7 @@ footer {
   display: inline-block;
   width: 10px;
   height: 12px;
-  background-image: url("../img/Vector.png"); /* 이미지 경로 */
+  background-image: url("../img/Vector.svg"); /* 이미지 경로 */
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 10px; /* 이미지와 텍스트 사이의 간격 */
@@ -424,8 +424,10 @@ footer {
   }
 
   .main-logo {
+    content: url("../img/footerlogo.png");
     width: 104px; /* 로고 크기 */
     height: auto;
+    margin-left: 20px;
   }
 
   .icon-container {
