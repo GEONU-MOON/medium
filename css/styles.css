@@ -184,7 +184,6 @@ nav {
 /* Footer 전체 */
 footer {
   background-color: white;
-  height: 394px;
 }
 
 .footer-container {
@@ -309,21 +308,49 @@ footer {
 }
 
 .footer-text {
+  display: flex;
+  flex-direction: column; /* .footer-column 들이 세로로 배치되도록 */
+  text-align: left; /* 텍스트는 왼쪽 정렬 */
+  color: #5f646f; /* 텍스트 색상 */
   color: var(--color-text-secondary, #5f646f);
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.4px;
+  gap: 6px;
 }
 
-.footer-text p {
-  margin: 0;
-  margin-bottom: 6px; /* 모든 p 태그의 아래쪽에 6px 간격 */
+.footer-column {
+  display: flex;
+  justify-content: flex-start; /* p 태그들이 가로로 배치되도록 */
+}
+
+.footer-column p {
+  margin: 0; /* p 태그의 기본 마진 제거 */
+  font-size: 13px;
+  white-space: nowrap; /* 줄바꿈 방지 */
+  position: relative; /* ::after 요소를 위한 설정 */
+}
+
+.footer-column p:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 12px;
+  background-image: url("../img/Vector.png"); /* 이미지 경로 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 10px; /* 이미지와 텍스트 사이의 간격 */
+  vertical-align: middle; /* 텍스트와 이미지가 수평으로 정렬되도록 */
 }
 
 .footer-text p:last-child {
-  margin-bottom: 0; /* 마지막 p 태그는 간격이 필요 없으므로 0으로 설정 */
+  width: 100%;
+}
+
+.footer-text p:last-child {
+  width: 100%;
 }
 
 .footer-powered-by {
