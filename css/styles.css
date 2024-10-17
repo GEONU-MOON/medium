@@ -538,7 +538,7 @@ footer {
   /* footer-powered-by 새로 정렬 및 왼쪽 정렬 */
   .footer-powered-by {
     display: flex;
-    flex-direction: column; /* 세로 정렬 */
+
     align-items: flex-start; /* 왼쪽 정렬 */
     gap: 5px; /* 텍스트와 로고 사이 간격 */
     margin-top: 4px;
@@ -574,20 +574,41 @@ footer {
   nav {
     overflow-x: auto;
     white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 및 Edge */
+  }
+  nav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera에서 스크롤 바 숨기기 */
   }
 
   .menu {
     display: inline-flex;
     flex-wrap: nowrap;
     width: max-content;
+    padding: 0;
+    margin: 0;
   }
 
   .menu li {
-    display: inline-block;
+    display: inline-flex; /* inline-flex로 변경하여 플렉스 박스 사용 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    height: 40px; /* 고정된 높이 */
+    background-color: #fff; /* 필요에 따라 배경색 설정 가능 */
+    border: 1px solid transparent; /* 선택적으로 테두리 설정 가능 */
+    border-radius: 4px; /* 모서리를 부드럽게 */
   }
 
+  .menu li a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: #333; /* 텍스트 색상 */
+    font-size: 16px; /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    display: block; /* 블록 요소로 변경하여 전체 클릭 가능 영역 설정 */
+  }
   .company-container {
-    gap: 20px;
     width: 320px;
   }
 
@@ -598,16 +619,16 @@ footer {
     margin: 0;
   }
 
-  .company-menu ul {
-    gap: 20px; /* 항목 사이 간격 */
-  }
-
   footer {
     background-color: white;
     height: auto;
   }
   .footer-info {
-    padding-bottom: 0;
+    padding: 16px 20px;
+  }
+
+  .footer-section {
+    gap: 8px; /* 세로 간격 12px 설정 */
   }
 
   .footer-section-container {
@@ -624,10 +645,8 @@ footer {
   .footer-info-links {
     width: 100%;
   }
-
   .footer-info-links a {
-    padding-left: 20px;
-    padding-right: 0;
+    gap: 8px;
   }
 
   .footer-info-links a:nth-child(n + 5) {
@@ -641,18 +660,16 @@ footer {
     align-items: flex-start; /* 왼쪽 정렬 */
     margin-top: 20px;
     width: 100%; /* 전체 너비 사용 */
-    padding-left: 20px; /* 왼쪽에 약간의 여백을 추가할 수 있음 */
   }
 
   /* footer-powered-by 새로 정렬 및 왼쪽 정렬 */
   .footer-powered-by {
     display: flex;
-    flex-direction: column; /* 세로 정렬 */
+
     align-items: flex-start; /* 왼쪽 정렬 */
     gap: 5px; /* 텍스트와 로고 사이 간격 */
     margin-top: 10px; /* 위쪽 간격 추가 */
     width: 100%; /* 전체 너비 사용 */
-    padding-left: 20px; /* 왼쪽에 약간의 여백을 추가할 수 있음 */
   }
 
   /* footer-copyright 새로 정렬 및 왼쪽 정렬 */
@@ -662,6 +679,7 @@ footer {
     align-items: flex-start; /* 왼쪽 정렬 */
     gap: 20px; /* 섹션 간 간격 */
     width: 100%; /* 전체 너비 사용 */
+    padding-right: 20px;
   }
 
   /* footer-text 왼쪽 정렬 */
