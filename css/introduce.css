@@ -60,6 +60,10 @@ body {
   border-bottom: 1px solid #ddd; /* 하단 보더 */
 }
 
+.company-info-row:last-child {
+  border-bottom: none; /* 마지막 항목의 하단 보더 제거 */
+}
+
 .company-info-row:first-child {
   border-top: 2px solid #000; /* 첫 번째 행에만 위쪽 보더 추가 */
 }
@@ -99,6 +103,7 @@ body {
 
   .company-content {
     width: 100%; /* 컨텐츠 너비를 100%로 */
+
     padding: 0;
     margin: 0; /* 불필요한 여백 제거 */
   }
@@ -127,14 +132,19 @@ body {
     height: 416px;
   }
 
+  .company-info {
+    text-align: left; /* 정보 텍스트는 왼쪽 정렬 */
+    padding: 0; /* 여백 초기화 */
+  }
+
   /* 라벨과 데이터를 세로로 정렬 */
   .company-info-row {
     display: flex;
     flex-direction: column; /* 세로 정렬 */
     align-items: flex-start; /* 왼쪽 정렬 */
-    padding: 10px 0; /* 간격 조정 */
+    padding: 16px 0; /* 간격 조정 */
     height: auto;
-    gap: 16px;
+    gap: 8px;
   }
 
   .footer-info-links ul li:nth-child(n + 5) {
