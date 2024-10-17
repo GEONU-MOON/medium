@@ -233,37 +233,45 @@ footer {
 .footer-info {
   width: 100%;
   text-align: center;
-  padding: 16px 0;
+  display: flex; /* flexbox 사용 */
+  justify-content: center; /* 좌우 가운데 정렬 */
   background-color: #f4f6f9; /* 배경 색상 조정 */
   border-bottom: 1px solid #e6ecf7;
+  padding: 16px 0;
 }
 
 .footer-info-links {
-  margin: 0 auto;
-
   display: flex;
-  flex-wrap: wrap; /* 여러 줄로 나열 가능 */
+  gap: 16px; /* 각 a 태그 간의 간격 설정 */
+
   width: 1200px;
+  flex-wrap: wrap;
 }
 
 .footer-info-links a {
   font-size: 13px;
-  color: var(--color-text-secondary, #5f646f);
-  text-decoration: none;
-  padding: 0 5px;
-  font-family: "Pretendard";
+  margin: 0; /* 모든 마진 제거 */
+  padding: 0; /* 모든 패딩 제거 */
+  text-decoration: none; /* 밑줄 제거 */
+  color: var(--color-text-secondary, #5f646f); /* 텍스트 색상 */
+  display: inline-flex;
+  align-items: center; /* 텍스트와 이미지가 수직 정렬되도록 */
+  gap: 16px; /* 텍스트와 이미지 사이 간격 */
+  font-family: "Pretendard", sans-serif; /* Pretendard 폰트 적용 */
 }
 
-/* 구분선을 추가하기 위한 스타일 */
 .footer-info-links a::after {
-  content: "|"; /* 구분선 표시 */
-  color: var(--color-text-secondary, #5f646f); /* 구분선 색상 */
-  margin-left: 10px;
+  content: ""; /* 이미지 추가 */
+  display: inline-block;
+  width: auto;
+  height: 12px;
+  content: url("../img/vector.png"); /* 이미지 경로 */
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-/* 마지막 링크에서 구분선 제거 */
 .footer-info-links a:last-child::after {
-  content: ""; /* 구분선 없앰 */
+  content: none; /* 마지막 a 태그 뒤에는 이미지 없앰 */
 }
 
 /* 개인정보처리방침에만 스타일 적용 */
