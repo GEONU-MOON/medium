@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 /* Ad Banner Section */
@@ -171,6 +171,7 @@ nav {
   font-weight: 400;
   line-height: 24px;
   padding-left: 16px;
+  font-family: "Pretendard";
 }
 
 .company-menu ul li a.active {
@@ -249,6 +250,7 @@ footer {
   color: var(--color-text-secondary, #5f646f);
   text-decoration: none;
   padding: 0 5px;
+  font-family: "Pretendard";
 }
 
 /* 구분선을 추가하기 위한 스타일 */
@@ -485,6 +487,116 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+  }
+
+  footer {
+    background-color: white;
+    height: auto;
+  }
+  .footer-info {
+    padding-bottom: 0;
+  }
+
+  .footer-section-container {
+    display: none;
+  }
+
+  .footer-copyright-wrapper {
+    width: 100%;
+    background-color: #f4f6f9;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .footer-info-links {
+    width: 100%;
+  }
+
+  .footer-info-links a {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+
+  .footer-info-links a:nth-child(n + 5) {
+    display: none; /* 5번째 링크부터 숨기기 */
+  }
+
+  /* footer-logo-container 새로 정렬 및 왼쪽 정렬 */
+  .footer-logo-container {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    margin-top: 20px;
+    width: 100%; /* 전체 너비 사용 */
+    padding-left: 20px; /* 왼쪽에 약간의 여백을 추가할 수 있음 */
+  }
+
+  /* footer-powered-by 새로 정렬 및 왼쪽 정렬 */
+  .footer-powered-by {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    gap: 5px; /* 텍스트와 로고 사이 간격 */
+    margin-top: 10px; /* 위쪽 간격 추가 */
+    width: 100%; /* 전체 너비 사용 */
+    padding-left: 20px; /* 왼쪽에 약간의 여백을 추가할 수 있음 */
+  }
+
+  /* footer-copyright 새로 정렬 및 왼쪽 정렬 */
+  .footer-copyright {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    gap: 20px; /* 섹션 간 간격 */
+    width: 100%; /* 전체 너비 사용 */
+  }
+
+  /* footer-text 왼쪽 정렬 */
+  .footer-text {
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    width: 100%; /* 전체 너비 사용 */
+  }
+
+  .footer-copyright-wrapper {
+    width: 100%;
+    background-color: #f4f6f9;
+    padding-top: 0;
+  }
+}
+
+/* ===========================
+   모바일 반응형 스타일 (max-width: 480px)
+============================== */
+@media (max-width: 480px) {
+  nav {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .menu {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: max-content;
+  }
+
+  .menu li {
+    display: inline-block;
+  }
+
+  .company-container {
+    gap: 20px;
+    width: 320px;
+  }
+
+  .company-menu {
+    width: 110%; /* 전체 너비 */
+    padding: 0;
+    border-bottom: none; /* 하단 구분선 추가 */
+    margin: 0;
+  }
+
+  .company-menu ul {
+    gap: 20px; /* 항목 사이 간격 */
   }
 
   footer {

@@ -1,6 +1,6 @@
 /* 기본 스타일 */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Noto Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -20,17 +20,18 @@ body {
   border-bottom: 2px solid #000; /* 원하는 색상과 두께로 설정 */
   padding-bottom: 8px; /* 텍스트와 보더 사이 간격 */
   margin-bottom: 16px;
+  font-family: "Pretendard";
 }
 
 .company-description {
   color: var(--color-text-secondary, #5f646f);
-  font-family: Pretendard;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px; /* 137.5% */
   margin-bottom: 40px;
   margin-top: 40px;
+  font-family: "Pretendard";
 }
 
 .company-org-chart {
@@ -145,5 +146,26 @@ body {
     width: 100%; /* 너비를 100%로 설정 */
     height: 22px;
     flex-basis: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-org-chart {
+    display: flex;
+    width: 320px;
+    height: 210px;
+    padding: 6px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    align-self: stretch;
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
+
+  .company-org-chart img {
+    width: 320px;
+    height: 210px;
   }
 }
