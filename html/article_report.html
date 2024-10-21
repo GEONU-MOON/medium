@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>뉴스포미</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/article_report.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Ad Banner Section -->
+      <div class="ad-banner">
+        <div class="text-container">
+          <div class="logo-and-week">
+            <img
+              src="../img/ad-logo.png"
+              alt="Reebok Logo"
+              class="reebok-logo"
+            />
+            <h1 class="family-week">FAMILY WEEK</h1>
+          </div>
+          <h2 class="festival-text">Reebok Life Festival</h2>
+        </div>
+      </div>
+
+      <!-- Logo and Login Section -->
+      <div class="logo-login-container">
+        <!-- 로그인 및 검색, 메뉴 아이콘 -->
+        <div class="login-container">
+          <!-- 로그인 버튼 (웹) -->
+          <div class="login-wrapper">
+            <a href="#" class="login-text">로그인</a>
+          </div>
+        </div>
+        <!-- Logo and Icon Section (통합) -->
+        <div class="logo-and-icon-container">
+          <!-- 메인 로고 -->
+          <img
+            src="../img/mainlogo.png"
+            alt="뉴스포미 Logo"
+            class="main-logo"
+          />
+
+          <!-- 아이콘들 (모바일) -->
+          <div class="icon-container">
+            <img
+              src="../img/Search.svg"
+              alt="Search Icon"
+              class="search-icon"
+            />
+            <img src="../img/Menu.svg" alt="Menu Icon" class="menu-icon" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="menu">
+          <li><a href="#">정치</a></li>
+          <li><a href="#">사회</a></li>
+          <li><a href="#">경제</a></li>
+          <li><a href="#">IT/과학</a></li>
+          <li><a href="#">연예</a></li>
+          <li><a href="#">스포츠</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="company-container">
+      <!-- 좌측 메뉴 -->
+      <div class="company-menu">
+        <ul>
+          <li><a href="#">매체소개</a></li>
+          <li><a href="#">CEO인사말</a></li>
+          <li><a href="#">신문윤리강령</a></li>
+          <li><a href="#">인터넷신문윤리강령</a></li>
+          <li><a href="#" class="active">기사제보</a></li>
+          <li><a href="#">청소년보호정책</a></li>
+          <li><a href="#">저작권보호정책</a></li>
+          <li><a href="#">이메일 무단수집거부</a></li>
+        </ul>
+      </div>
+
+      <!-- 우측 컨텐츠 -->
+      <div class="report-form">
+        <div class="title-row">
+          <h1>기사제보</h1>
+          <p class="required-note">
+            <span class="asterisk">*</span> 필수입력 항목입니다.
+          </p>
+        </div>
+        <form
+          action="#"
+          method="POST"
+          enctype="multipart/form-data"
+          class="article-submit-form"
+        >
+          <!-- 이름과 휴대폰 -->
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="name">이름<span class="required">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="이름"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">휴대폰</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="010-0000-0000"
+              />
+            </div>
+          </div>
+
+          <!-- 이메일 -->
+          <div class="form-group">
+            <label for="email">메일<span class="required">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="이메일 주소"
+              required
+            />
+          </div>
+
+          <!-- 제목 -->
+          <div class="form-group">
+            <label for="title">제목<span class="required">*</span></label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="제목"
+              required
+            />
+          </div>
+
+          <!-- 내용 -->
+          <div class="form-group">
+            <label for="content">내용<span class="required">*</span></label>
+            <textarea
+              id="content"
+              name="content"
+              placeholder="내용 입력"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <!-- 파일 첨부 -->
+          <div class="form-group file-upload-group">
+            <label for="file">첨부파일</label>
+            <input type="file" id="file" name="file" />
+            <label for="file" class="file-upload-label">파일 선택</label>
+          </div>
+
+          <!-- 자동등록방지 (캡차) -->
+          <div class="form-group">
+            <label for="captcha"
+              >자동등록방지<span class="required">*</span></label
+            >
+            <div class="captcha-container">
+              <img src="captcha-image-url" alt="captcha" />
+              <input
+                type="text"
+                id="captcha"
+                name="captcha"
+                placeholder="왼쪽의 문자를 입력하세요"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- 개인정보처리방침 -->
+          <div class="privacy-policy">
+            <h2>개인정보처리방침</h2>
+            <p>
+              1. 수집하는 개인정보의 항목 및 수집방법 <br />
+              <span><strong>{Company name}</strong></span> (이하 "회사")는
+              서비스 제공 및 기타 상담 등을 위해 고객(이하 "회원")의 개인정보를
+              수집하고 있으며, 해당 정보를 처리합니다.
+            </p>
+
+            <div class="policy-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>필수항목</th>
+                    <th>선택항목</th>
+                    <th>개인정보 수집방법</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>이름, 이메일</td>
+                    <td>휴대폰 번호</td>
+                    <td>웹사이트를 통한 직접 입력</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="privacy-check">
+              <input type="checkbox" id="agree" name="agree" required />
+              <label for="agree"
+                >위의 개인정보 수집 및 이용에 관한 정책에 동의 합니다.</label
+              >
+            </div>
+          </div>
+
+          <!-- 확인 버튼 -->
+          <div class="form-group">
+            <button type="submit" class="submit-btn">확인</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section-container">
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+          <div class="footer-section">
+            <div class="section-title">섹션</div>
+            <div class="sub-section">세부섹션1</div>
+            <div class="sub-section">세부섹션2</div>
+            <div class="sub-section">세부섹션3</div>
+          </div>
+        </div>
+        <!-- 두 번째 섹션 그룹 -->
+        <div class="footer-info">
+          <div class="footer-info-links">
+            <a href="#">매체 소개</a>
+            <a href="#">CEO 인사말</a>
+            <a href="#">광고문의</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">신문윤리강령</a>
+            <a href="#">인터넷신문윤리강령</a>
+            <a href="#" class="highlight-link">기사제보</a>
+            <a href="#">보도자료</a>
+            <a href="#">기사검색</a>
+          </div>
+        </div>
+
+        <!-- 세 번째 섹션 -->
+        <div class="footer-copyright-wrapper">
+          <div class="footer-copyright">
+            <div class="footer-logo-container">
+              <img
+                src="../img/footerlogo.png"
+                alt="뉴스포미 로고"
+                class="footer-logo"
+              />
+              <div class="footer-text">
+                <div class="footer-column">
+                  <p>주소: -</p>
+                  <p>등록번호: -</p>
+                </div>
+                <div class="footer-column">
+                  <p>편집인: -</p>
+                  <p>발행인: -</p>
+                  <p>청소년 보호책임자: -</p>
+                  <p>대표전화: -</p>
+                </div>
+                <div class="footer-column">
+                  <p>Copyright ⓒ {회사명} All Rights Reserved.</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-powered-by">
+              <span>Powered by</span>
+              <img src="../img/processAi.png" alt="Presscon Ai 로고" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
