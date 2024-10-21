@@ -36,6 +36,10 @@ body {
   font-family: "Pretendard";
 }
 
+.company-content p {
+  margin: 0;
+}
+
 .company-description {
   color: #000;
   font-family: "Noto Sans KR";
@@ -127,6 +131,38 @@ body {
     margin: 0; /* 불필요한 여백 제거 */
   }
 
+  .company-content h1 {
+    color: var(--color-neutral-900, #222);
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: -0.4px;
+  }
+
+  .company-content h3 {
+    color: #000;
+    font-family: "Noto Sans Lao";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.4px;
+    padding-bottom: 8px; /* 텍스트와 보더 사이 간격 */
+    margin-bottom: 16px;
+    font-family: "Pretendard";
+  }
+
+  .company-content p {
+    color: #000;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
   .company-description {
     text-align: left;
     margin: 24px 0;
@@ -187,6 +223,38 @@ body {
     align-self: stretch;
     margin-bottom: 24px;
     margin-top: 24px;
+  }
+
+  .company-content h1 {
+    color: var(--color-neutral-900, #222);
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: -0.4px;
+  }
+
+  .company-content h3 {
+    color: #000;
+    font-family: "Noto Sans Lao";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.4px;
+    padding-bottom: 8px; /* 텍스트와 보더 사이 간격 */
+    margin-bottom: 16px;
+    font-family: "Pretendard";
+  }
+
+  .company-content p {
+    color: #000;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 
   #map {
