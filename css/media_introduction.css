@@ -23,12 +23,26 @@ body {
   font-family: "Pretendard";
 }
 
+.company-content h3 {
+  color: #000;
+  font-family: "Noto Sans Lao";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  padding-bottom: 8px; /* 텍스트와 보더 사이 간격 */
+  margin-bottom: 16px;
+  font-family: "Pretendard";
+}
+
 .company-description {
-  color: var(--color-text-secondary, #5f646f);
-  font-size: 16px;
+  color: #000;
+  font-family: "Noto Sans KR";
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 22px; /* 137.5% */
+  line-height: normal;
   margin-bottom: 40px;
   margin-top: 40px;
   font-family: "Pretendard";
@@ -48,7 +62,7 @@ body {
 }
 
 #map {
-  width: 893px; /* img의 width 속성 */
+  max-width: 893px; /* img의 width 속성 */
   height: 360px; /* img의 height 속성 */
 }
 
@@ -95,7 +109,7 @@ body {
 /* ===========================
    갤럭시 폴드 반응형 스타일 (max-width: 800px)
 ============================== */
-@media (max-width: 800px) {
+@media (max-width: 930px) {
   .company-content h1 {
     color: var(--color-neutral-900, #222);
     font-family: Pretendard;
@@ -120,7 +134,7 @@ body {
 
   .company-org-chart {
     display: flex;
-    width: 634px;
+    max-width: 634px;
     height: 320px;
     padding: 6px 8px;
     flex-direction: column;
@@ -133,7 +147,7 @@ body {
   }
 
   #map {
-    width: 634px;
+    max-width: 634px;
     height: 320px;
   }
 
@@ -163,7 +177,7 @@ body {
 @media (max-width: 480px) {
   .company-org-chart {
     display: flex;
-    width: 320px;
+    max-width: 320px;
     height: 320px;
     padding: 6px 8px;
     flex-direction: column;
@@ -176,7 +190,7 @@ body {
   }
 
   #map {
-    width: 320px;
+    max-width: 320px;
     height: 320px;
   }
 

@@ -65,7 +65,8 @@ body {
 }
 
 .login-container {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   height: 30px;
   display: flex;
   justify-content: flex-end;
@@ -100,7 +101,7 @@ body {
 }
 
 .main-logo-container {
-  width: 1200px;
+  max-width: 1200px;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -140,14 +141,15 @@ nav {
   margin: 0 auto;
   height: 1202px;
   gap: 50px;
-  width: 1200px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 50px 16px;
 }
 
 /* 좌측 메뉴 */
 .company-menu {
   flex-basis: 20%;
+  padding-left: 16px;
 }
 
 .company-menu ul {
@@ -197,7 +199,7 @@ footer {
   width: 100%;
   display: flex;
   background-color: #fbfbfd;
-  padding: 40px 0;
+  padding: 40px 16px;
   justify-content: center;
 }
 
@@ -236,7 +238,7 @@ footer {
   justify-content: center; /* 좌우 가운데 정렬 */
   background-color: #f4f6f9; /* 배경 색상 조정 */
   border-bottom: 1px solid #e6ecf7;
-  padding: 16px 0;
+  padding: 16px 16px;
 }
 
 .footer-info-links {
@@ -286,7 +288,7 @@ footer {
 .footer-copyright-wrapper {
   width: 100%;
   background-color: #f4f6f9;
-  padding: 40px 0; /* 여백 설정 */
+  padding: 40px 16px; /* 여백 설정 */
 }
 
 .footer-copyright {
@@ -373,7 +375,7 @@ footer {
 /* ===========================
    갤럭시 폴드 반응형 스타일 (max-width: 800px)
 ============================== */
-@media (max-width: 800px) {
+@media (max-width: 930px) {
   .ad-banner {
     background-size: 320px 100px;
     height: 100px;
@@ -547,12 +549,34 @@ footer {
     padding-bottom: 40px;
   }
 
-  .footer-info-links {
-    width: 634px;
+  .footer-info-links a {
+    display: none; /* 모든 링크를 기본적으로 숨기기 */
   }
 
-  .footer-info-links a:nth-child(n + 5) {
-    display: none; /* 5번째 링크부터 숨기기 */
+  .footer-info-links a:nth-child(1), /* 신문사 소개 */
+  .footer-info-links a:nth-child(5), /* 문의하기 */
+  .footer-info-links a:nth-child(7), /* 개인정보처리방침 */
+  .footer-info-links a:nth-child(10) /* 회원이용약관 */ {
+    display: inline-flex; /* 선택한 링크 보이기 */
+    align-items: center; /* 텍스트와 이미지 수직 정렬 */
+  }
+
+  /* ::after 요소를 미디어 쿼리 내에서 다시 활성화 */
+  .footer-info-links a:nth-child(1)::after, /* 신문사 소개 */
+  .footer-info-links a:nth-child(5)::after, /* 문의하기 */
+  .footer-info-links a:nth-child(7)::after {
+    content: ""; /* 이미지 추가 */
+    display: inline-block;
+    width: auto;
+    height: 12px;
+    content: url("../img/Vector.svg"); /* 이미지 경로 */
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  /* 마지막 링크는 ::after 속성 제거 */
+  .footer-info-links a:nth-child(10)::after {
+    content: none;
   }
 
   /* footer-logo-container 새로 정렬 및 왼쪽 정렬 */
@@ -673,13 +697,13 @@ footer {
 
   .footer-info-links {
     width: 100%;
-  }
-  .footer-info-links a {
     gap: 8px;
   }
 
-  .footer-info-links a:nth-child(n + 5) {
-    display: none; /* 5번째 링크부터 숨기기 */
+  .footer-info-links a {
+    font-size: 12px; /* 폰트 크기 줄이기 */
+    padding: 0 0px; /* 좌우 여백 줄이기 */
+    gap: 8px; /* 텍스트와 이미지 간격 줄이기 */
   }
 
   /* footer-logo-container 새로 정렬 및 왼쪽 정렬 */
