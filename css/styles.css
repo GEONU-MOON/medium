@@ -556,7 +556,7 @@ footer {
   .footer-info-links a:nth-child(1), /* 신문사 소개 */
   .footer-info-links a:nth-child(5), /* 문의하기 */
   .footer-info-links a:nth-child(7), /* 개인정보처리방침 */
-  .footer-info-links a:nth-child(10) /* 회원이용약관 */ {
+  .footer-info-links a:nth-child(3) /* 회원이용약관 */ {
     display: inline-flex; /* 선택한 링크 보이기 */
     align-items: center; /* 텍스트와 이미지 수직 정렬 */
   }
