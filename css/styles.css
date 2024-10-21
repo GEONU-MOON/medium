@@ -141,7 +141,7 @@ nav {
   margin: 0 auto;
   height: 1202px;
   gap: 50px;
-  width: 100%;
+  width: calc(100%-32px);
   max-width: 1200px;
   padding: 50px 16px;
 }
@@ -460,7 +460,7 @@ footer {
     margin: 0 auto;
     height: auto;
     gap: 20px;
-    width: 634px;
+    width: calc(100%-32px);
     padding-top: 20px;
     margin-bottom: 40px;
   }
@@ -662,7 +662,7 @@ footer {
     display: block; /* 블록 요소로 변경하여 전체 클릭 가능 영역 설정 */
   }
   .company-container {
-    max-width: 400px;
+    width: calc(100%-32px);
     margin: 0 auto;
   }
 
