@@ -167,8 +167,22 @@
           <!-- 파일 첨부 -->
           <div class="form-group file-upload-group">
             <label for="file">첨부파일</label>
-            <input type="file" id="file" name="file" />
-            <label for="file" class="file-upload-label">파일 선택</label>
+            <div class="file-upload-row">
+              <input
+                type="text"
+                class="file-display"
+                value="선택된 파일 없음"
+                readonly
+              />
+              <input type="file" id="file" name="file" />
+              <button
+                type="button"
+                class="file-upload-btn"
+                onclick="document.getElementById('file').click();"
+              >
+                파일 선택
+              </button>
+            </div>
           </div>
 
           <!-- 자동등록방지 (캡차) -->
@@ -345,5 +359,16 @@
         </div>
       </div>
     </footer>
+    <script>
+      // 파일이 선택되면, 해당 파일명을 입력창에 표시하는 함수
+      document.getElementById("file").addEventListener("change", function () {
+        const fileDisplay = document.querySelector(".file-display");
+        if (this.files.length > 0) {
+          fileDisplay.value = this.files[0].name; // 선택된 파일명 표시
+        } else {
+          fileDisplay.value = "선택된 파일 없음"; // 파일이 없으면 기본 메시지 표시
+        }
+      });
+    </script>
   </body>
 </html>
