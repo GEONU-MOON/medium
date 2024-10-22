@@ -143,52 +143,151 @@ textarea {
 }
 
 .captcha-container img {
-  width: 100px;
+  width: 164px;
   height: auto;
 }
 
+#captcha {
+  width: 200px; /* 부모 요소에 맞게 넓이 설정 */
+  height: 46px;
+  padding: 10px 12px; /* 안쪽 여백 (패딩) */
+  color: var(--color-text-ghost, #c5c8ce);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+  border: 1px solid #ddd; /* 테두리 색상 */
+  border-radius: 5px; /* 모서리 둥글게 처리 */
+  box-sizing: border-box; /* 패딩과 테두리 포함한 크기 계산 */
+}
+
 .privacy-policy {
-  background-color: #f9f9f9;
+  background-color: white;
   padding: 20px;
   border: 1px solid #ddd;
   margin-bottom: 20px;
+  border-radius: 5px; /* 모서리 둥글게 처리 */
+  width: 100%;
+  overflow: hidden;
+  height: 280px;
 }
 
 .privacy-policy h2 {
+  color: var(--color-text-primary, #222);
+  font-family: Pretendard;
   font-size: 18px;
-  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0 0 16px 0; /* Bottom margin of 16px */
 }
 
+.policy-content {
+  max-height: 200px; /* 내용 높이 제한 */
+  overflow-y: auto; /* 세로 스크롤 */
+  padding-right: 10px; /* 스크롤바와 텍스트 간격 */
+}
+
+.policy-content > div {
+  margin-bottom: 16px; /* Add 16px vertical space below the div content */
+}
+
+.policy-row {
+  color: var(--color-text-secondary, #5f646f);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+.policy-table {
+  width: 100%; /* 테이블이 부모 컨테이너의 100%를 채움 */
+  table-layout: fixed; /* 테이블 셀 너비를 고정하여 균일하게 배치 */
+  border-collapse: collapse; /* 테두리 간의 공백 제거 */
+}
 .policy-table table {
   width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
+  border-collapse: collapse; /* 테두리 간의 공백 제거 */
+  border-top: 2px solid var(--color-text-primary, #222);
+}
+
+.policy-table th {
+  border-right: 1px solid var(--color-neutral-150, #ebeef1);
+
+  background: var(--color-neutral-100, #f2f4f8);
+  color: var(--color-text-secondary, #5f646f);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 157.143% */
+}
+
+.policy-table td {
+  border-right: 1px solid var(--color-neutral-150, #ebeef1);
+  color: var(--color-text-secondary, #5f646f);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 157.143% */
 }
 
 .policy-table th,
 .policy-table td {
-  padding: 10px;
+  width: calc(100% / 3); /* 각 열이 동일한 비율로 부모 너비를 차지 */
+  padding: 8px 12px; /* 셀 내부 여백 */
   border: 1px solid #ddd;
-  text-align: left;
+  text-align: center; /* 텍스트 중앙 정렬 */
+  vertical-align: middle; /* 텍스트 세로 중앙 정렬 */
 }
 
 .privacy-check {
   display: flex;
   align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
 }
 
 .privacy-check input {
   margin-right: 10px;
 }
 
+#agree {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+}
+
+.privacy-check label {
+  color: var(--color-text-secondary, #5f646f);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+  margin-bottom: 0;
+}
+
 .submit-btn {
-  width: 100%;
-  padding: 12px;
-  background-color: #007bff;
-  color: white;
+  display: block; /* 버튼을 블록 요소로 설정 */
+  margin: 0 auto; /* 버튼을 가로로 중앙에 배치 */
+  width: 160px; /* 버튼의 너비를 유지 */
+  height: 44px; /* 버튼의 높이 */
+  padding: 12px 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  background: var(--color-text-disabled, #c5c8ce); /* 배경색 */
+  color: var(--color-text-invert, #fff); /* 글자색 */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .required {
@@ -198,117 +297,16 @@ textarea {
    갤럭시 폴드 반응형 스타일 (max-width: 800px)
 ============================== */
 @media (max-width: 930px) {
-  .ceo-content h1 {
-    color: var(--color-neutral-900, #222);
-    font-family: Pretendard;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 32px; /* 133.333% */
-    margin: 0;
+  .captcha-container {
+    flex-direction: column; /* 세로로 배치 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    gap: 10px; /* 이미지와 입력 필드 사이 간격 */
   }
 
-  .ceo-content {
-    width: 100%; /* 컨텐츠 너비를 100%로 */
-
-    padding: 0;
-    margin: 0; /* 불필요한 여백 제거 */
-  }
-
-  .ceo-content h1 {
-    color: var(--color-neutral-900, #222);
-    font-family: Pretendard;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 32px; /* 133.333% */
-    letter-spacing: -0.4px;
-  }
-
-  .ceo-content h3 {
-    color: #000;
-    font-family: "Noto Sans Lao";
-
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: -0.4px;
-    padding-bottom: 8px; /* 텍스트와 보더 사이 간격 */
-    margin-bottom: 16px;
-    font-family: "Pretendard";
-  }
-
-  .ceo-content p {
-    color: #000;
-    font-family: "Noto Sans KR";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-  }
-
-  .ceo-description {
-    text-align: left;
-    margin: 24px 0;
-  }
-
-  .signature {
-    text-align: center;
-    font-size: 20px; /* 원하는 폰트 크기로 설정 */
-    font-weight: 800; /* 원하는 폰트 두께 설정 */
-    padding-top: 40px; /* 적당한 위쪽 여백 설정 */
+  #captcha {
+    width: 100%; /* 작은 화면에서는 입력 필드가 부모의 너비를 차지하도록 설정 */
   }
 }
 
 @media (max-width: 480px) {
-  .company-org-chart {
-    display: flex;
-    max-width: 320px;
-    height: 320px;
-    padding: 6px 8px;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    align-self: stretch;
-    margin-bottom: 24px;
-    margin-top: 24px;
-  }
-
-  .ceo-content h1 {
-    color: var(--color-neutral-900, #222);
-    font-family: Pretendard;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 32px; /* 133.333% */
-    letter-spacing: -0.4px;
-  }
-
-  .ceo-content h3 {
-    color: #000;
-    font-family: "Noto Sans Lao";
-
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: -0.4px;
-    padding-bottom: 8px; /* 텍스트와 보더 사이 간격 */
-    margin-bottom: 16px;
-    font-family: "Pretendard";
-  }
-
-  .ceo-content p {
-    color: #000;
-    font-family: "Noto Sans KR";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-  }
-
-  .signature {
-    text-align: center;
-    font-size: 20px; /* 원하는 폰트 크기로 설정 */
-    font-weight: 800; /* 원하는 폰트 두께 설정 */
-    padding-top: 40px; /* 적당한 위쪽 여백 설정 */
-  }
 }
