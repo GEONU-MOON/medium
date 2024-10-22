@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>뉴스포미</title>
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/article_report.css" />
+    <link rel="stylesheet" href="../css/email_rejection.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
@@ -98,164 +98,16 @@
       </div>
 
       <!-- 우측 컨텐츠 -->
-      <div class="report-form">
-        <div class="title-row">
-          <h1>기사제보</h1>
-          <p class="required-note">
-            <span class="asterisk">*</span> 필수입력 항목입니다.
+      <div class="ceo-content">
+        <h1>이메일 무단수집거부</h1>
+        <div class="ceo-description">
+          <h3>이메일무단수집거부란?</h3>
+          <p>
+            본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그
+            밖의 기술적인 장치를 이용하여 무단으로 수집되는 것을 거부하며, 이를
+            위반시 정보통신망법에 의해 형사처벌됨을 유념하시기 바랍니다.
           </p>
         </div>
-        <form
-          action="#"
-          method="POST"
-          enctype="multipart/form-data"
-          class="article-submit-form"
-        >
-          <!-- 이름과 휴대폰 -->
-          <div class="form-group-row">
-            <div class="form-group">
-              <label for="name">이름<span class="required">*</span></label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="이름"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="phone">휴대폰</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="010-0000-0000"
-              />
-            </div>
-          </div>
-
-          <!-- 이메일 -->
-          <div class="form-group">
-            <label for="email">메일<span class="required">*</span></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="이메일 주소"
-              required
-            />
-          </div>
-
-          <!-- 제목 -->
-          <div class="form-group">
-            <label for="title">제목<span class="required">*</span></label>
-            <input
-              type="text"
-              id="title"
-              name="title"
-              placeholder="제목"
-              required
-            />
-          </div>
-
-          <!-- 내용 -->
-          <div class="form-group">
-            <label for="content">내용<span class="required">*</span></label>
-            <textarea
-              id="content"
-              name="content"
-              placeholder="내용 입력"
-              rows="5"
-              required
-            ></textarea>
-          </div>
-
-          <!-- 파일 첨부 -->
-          <div class="form-group file-upload-group">
-            <label for="file">첨부파일</label>
-            <div class="file-upload-row">
-              <input
-                type="text"
-                class="file-display"
-                value="선택된 파일 없음"
-                readonly
-              />
-              <input type="file" id="file" name="file" />
-              <button
-                type="button"
-                class="file-upload-btn"
-                onclick="document.getElementById('file').click();"
-              >
-                파일 선택
-              </button>
-            </div>
-          </div>
-
-          <!-- 자동등록방지 (캡차) -->
-          <div class="form-group">
-            <label for="captcha"
-              >자동등록방지<span class="required">*</span></label
-            >
-            <div class="captcha-container">
-              <img src="../img/autoprotect.png" alt="captcha" />
-              <input
-                type="text"
-                id="captcha"
-                name="captcha"
-                placeholder="왼쪽의 문자를 입력하세요"
-                required
-              />
-            </div>
-          </div>
-
-          <!-- 개인정보처리방침 -->
-          <div class="privacy-policy">
-            <h2>개인정보처리방침</h2>
-            <div class="policy-content">
-              <div class="policy-row">
-                기사제보 등을 희망하는 기업 및 개인을 대상으로 아래와 같이
-                개인정보를 수집하고 있습니다.<br />
-                1. 수집 개인정보 항목 : 이름, 이메일, 전화번호 <br />
-                2. 개인정보의 수집 및 이용목적 : 신청에 따른 본인확인 및 원활한
-                의사소통 경로 확보<br />
-                3. 개인정보의 이용기간 : 모든 검토가 완료된 후 3개월간 이용자의
-                조회를 위하여 보관하며, 이후 해당정보를 지체 없이 파기합니다.<br />
-                4. 개인정보 수집 동의 거부권 : 개인정보 수집 동의에 거부할 수
-                있으며 동의하지 않는 경우 의견 접수가 불가능합니다.<br />
-                5. 그 밖의 사항은 개인정보처리방침을 준수합니다.
-              </div>
-              <div class="policy-table">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>필수항목</th>
-                      <th>선택항목</th>
-                      <th>개인정보 수집방법</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>이름, 이메일</td>
-                      <td>휴대폰 번호</td>
-                      <td>웹사이트를 통한 직접 입력</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="privacy-check">
-            <input type="checkbox" id="agree" name="agree" required />
-            <label for="agree"
-              >위의 개인정보 수집 및 이용에 관한 정책에 동의 합니다.</label
-            >
-          </div>
-
-          <!-- 확인 버튼 -->
-          <div class="form-group">
-            <button type="submit" class="submit-btn">확인</button>
-          </div>
-        </form>
       </div>
     </div>
 
@@ -371,6 +223,5 @@
         </div>
       </div>
     </footer>
-    <script src="../js/fileUpload.js"></script>
   </body>
 </html>
