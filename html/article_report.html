@@ -399,7 +399,10 @@
       // CAPTCHA 새로고침
       document
         .getElementById("refreshCaptcha")
-        .addEventListener("click", setCaptcha);
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // 기본 폼 제출 방지
+          setCaptcha(); // 새 CAPTCHA 생성
+        });
 
       // 폼 제출 시 CAPTCHA 검증
       document
