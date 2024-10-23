@@ -168,7 +168,12 @@
                 <tr>
                   <td>다운로드</td>
                   <td>
-                    <button class="download-btn">복제ㆍ전송 중단 요청서</button>
+                    <button
+                      class="download-btn"
+                      onclick="downloadFile('복제전송중단요청서.zip')"
+                    >
+                      복제ㆍ전송 중단 요청서
+                    </button>
                   </td>
                 </tr>
               </tbody>
@@ -191,7 +196,12 @@
                 <tr>
                   <td>다운로드</td>
                   <td>
-                    <button class="download-btn">복제ㆍ전송 재개 요청서</button>
+                    <button
+                      class="download-btn"
+                      onclick="downloadFile('복제전송재개요청서.zip')"
+                    >
+                      복제ㆍ전송 재개 요청서
+                    </button>
                   </td>
                 </tr>
               </tbody>
@@ -313,5 +323,11 @@
         </div>
       </div>
     </footer>
+    <script>
+      function downloadFile(fileName) {
+        const filePath = `../files/${encodeURIComponent(fileName)}`;
+        window.location.href = filePath;
+      }
+    </script>
   </body>
 </html>
